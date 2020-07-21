@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 const TodoForm = (props) => {
   const [item, setItem] = useState({});
 
-  // const [state, setState] = useState({ item: props.item });
+  
 
   console.log('this is the item:', item);
 
@@ -18,7 +19,6 @@ const TodoForm = (props) => {
     setItem({});
   };
 
-  // render() {
   return (
     <>
       <h3>Add Item</h3>
@@ -44,26 +44,5 @@ const TodoForm = (props) => {
     </>
   );
 };
-// }
-
-// class TodoForm extends React.Component {
-
-//   constructor(props) {
-//     super(props);
-//     this.state = { item: {} };
-//   }
-// handleInputChange = e => {
-//   this.setState({ item: {...this.state.item, [e.target.name]: e.target.value } });
-// };
-
-// handleSubmit = (e) => {
-//   e.preventDefault();
-//   e.target.reset();
-//   this.props.handleSubmit(this.state.item);
-//   const item = {};
-//   this.setState({item});
-// };
-
-// }
 
 export default TodoForm;
