@@ -14,7 +14,7 @@ const ToDo = (props) => {
     setList( [...list, item] );
   };
 
-  const toggleComplete = id => {
+  const toggleComplete = (id) => {
 
     let item = list.filter(i => i._id === id)[0] || {};
 
@@ -61,7 +61,7 @@ const ToDo = (props) => {
       </section>
     </>
   );
-}
+};
 
 
 export default ToDo;
