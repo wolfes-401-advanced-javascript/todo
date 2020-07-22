@@ -4,7 +4,7 @@ import useForm from '../todo/hooks/useForm.js';
 
 const TodoForm = (props) => {
   const [item, handleInputChange, handleSubmit] = useForm(props.handleSubmit);
-  console.log ('this is the item', item);
+  console.log ('this is the item from form', item);
 
   return (
     <>

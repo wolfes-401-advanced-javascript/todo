@@ -20,8 +20,8 @@ const ToDo = (props) => {
 
     if (item._id) {
       item.complete = !item.complete;
-      let list = list.map(listItem => listItem._id === item._id ? item : listItem);
-      setList( list );
+      let newList = list.map(listItem => listItem._id === item._id ? item : listItem);
+      setList( newList );
     }
 
   };

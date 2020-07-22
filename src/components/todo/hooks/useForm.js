@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import useAjax from './useAjax.js';
 
 const useForm = (callback) => {
   const [item, setItem] = useState({});
 
-  console.log('this is the item:', item);
+  console.log('this is the item from useForm:', item);
 
   const handleInputChange = (e) => {
     e.preventDefault();
