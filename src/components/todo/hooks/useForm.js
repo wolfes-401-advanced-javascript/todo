@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import useAjax from './useAjax.js';
+// import useAjax from './useAjax.js';
 
 const useForm = (callback) => {
   const [item, setItem] = useState({});
