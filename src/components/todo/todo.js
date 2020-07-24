@@ -8,7 +8,7 @@ import './todo.scss';
 const ToDo = (props) => {
 
   const [list, setList] = useState([]);
-  const [ data ] = useFetch('https://api-js401.herokuapp.com/api/v1/todo');
+  const [ data ] = useFetch({ url: 'https://api-js401.herokuapp.com/api/v1/todo', method: 'get' });
 
   console.log('todo data:', data );
 
