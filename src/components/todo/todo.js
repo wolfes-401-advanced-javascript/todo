@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import TodoForm from './form.js';
 import TodoList from './list.js';
+import useFetch from './hooks/useAjax.js';
 
 import './todo.scss';
 
 const ToDo = (props) => {
 
   const [list, setList] = useState([]);
+  const [ data ] = useFetch({ url: 'https://api-js401.herokuapp.com/api/v1/todo', method: 'get' });
+
+  console.log('todo data:', data );
 
   const addItem = (item) => {
     item._id = Math.random();
@@ -26,18 +30,14 @@ const ToDo = (props) => {
 
   };
 
+
   useEffect(() => {
-    let list = [
-      { _id: 1, complete: false, text: 'Clean the Kitchen', difficulty: 3, assignee: 'Person A' },
-      { _id: 2, complete: false, text: 'Do the Laundry', difficulty: 2, assignee: 'Person A' },
-      { _id: 3, complete: false, text: 'Walk the Dog', difficulty: 4, assignee: 'Person B' },
-      { _id: 4, complete: true, text: 'Do Homework', difficulty: 3, assignee: 'Person C' },
-      { _id: 5, complete: false, text: 'Take a Nap', difficulty: 1, assignee: 'Person B' },
-    ];
-
-    setList( list );
-  }, []);
-
+    if(data){
+      
+      setList( data.results );
+    }
+  }, [data]);
+ 
   return (
     <>
       <header>

@@ -3,9 +3,9 @@ import { Button } from 'react-bootstrap';
 import useForm from '../todo/hooks/useForm.js';
 
 const TodoForm = (props) => {
+  // item = all the inputs from the form i.e.: text, difficulty, assignee objects
   const [item, handleInputChange, handleSubmit] = useForm(props.handleSubmit);
-  console.log ('this is the item from form', item);
-
+  
   return (
     <>
       <h3>Add Item</h3>
