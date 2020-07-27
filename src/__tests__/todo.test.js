@@ -2,7 +2,7 @@ import React from 'react';
 
 import { shallow } from 'enzyme';
 
-import ToDo from '../components/todo.js';
+import ToDo from '../components/todo/todo.js';
 
 
 describe('Testing the functionality of the ToDo app', () => {
